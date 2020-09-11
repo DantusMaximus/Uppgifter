@@ -2,6 +2,10 @@
 
 namespace övningetch2c
 {
+    enum Valalternativ{
+        litetTal = 128,
+        stortTal = 255
+    }
     class Program
     {
         static void Main(string[] args)
@@ -11,10 +15,7 @@ namespace övningetch2c
             int ettor = 0;
             while(tal>0)
             {
-            if(tal%2 == 1)
-            {
-                ettor++;
-            }
+            ettor += tal%2;
             tal/=2;
             }
             Console.WriteLine("Antal nollor:" + (8-ettor));
